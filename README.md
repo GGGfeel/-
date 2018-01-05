@@ -1,9 +1,9 @@
 # -
 使用Python 调用百度识图，识取本地图片并得到结果
 先自己手动完成百度识图的整个过程，#5为向百度上传图片，#10为一个不知道的响应过程，#14为一个关于注册的js响应，#16同样为一个json。通过观察可知，识图的相关响应只发生在#5和#10以及#16三步。
-
+![image](http://img.blog.csdn.net/20180105162050480?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc1OTY2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 利用Fiddler观察#5的请求信息，是一个post形式的请求，除了一般的headers以外，还有一个文件传输
-
+![image](http://img.blog.csdn.net/20180105162659350?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc1OTY2ODY=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 （具体内容不止图中这点）
 这是一个multipart/form-data请求，能够用python的requests进行模拟。具体方法参照：
 http://blog.csdn.net/j_akill/article/details/43560293和https://www.cnblogs.com/titan5750/p/6879114.html
